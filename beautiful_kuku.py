@@ -27,6 +27,11 @@ def main():
     print(','.join(osaka))
 
     # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+    temps = []
+    for tempetatrues in weather_information:
+        if tempetatrues['prefecture'] == '福岡県':
+            temps.append(tempetatrues['temperature'])
+    print(sum(temps) / len(temps))
 
 
 if __name__ == '__main__':
